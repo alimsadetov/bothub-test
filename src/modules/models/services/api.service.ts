@@ -28,7 +28,7 @@ export class ApiService {
     }
   }
 
-  async getDataFromOpenrouter(){
-    return (await this.getApiData(this.configService.get(OPENROUTER_REQUEST_URL))).data
+  async getDataFromOpenrouter() {
+    return (await this.getApiData(this.configService.get(OPENROUTER_REQUEST_URL))).data;
   }
 }

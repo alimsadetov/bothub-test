@@ -11,7 +11,7 @@ export class BaseRepository<Type> {
     this.connection = new Connection(configService);
   }
 
-  async findOneById(id: number|string): Promise<Type | null> {
+  async findOneById(id: number | string): Promise<Type | null> {
     const sql = `SELECT * FROM "${this.tableName}" WHERE id = $1`;
     const source = await this.connection.fetchRow(sql, [id]);
     if (!source) {
@@ -63,7 +63,7 @@ export class BaseRepository<Type> {
     try {
       return <Type>(<unknown>await this.connection.insert(this.tableName, <object>(<unknown>model)));
     } catch (e) {
-		console.log(e)
+      console.log(e);
       throw new UnprocessableEntityException(`Could not create ${this.tableName}.`);
     }
   }

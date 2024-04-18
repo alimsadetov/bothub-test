@@ -9,7 +9,7 @@ import { ModelsMapper } from './mappers/models.mapper';
 import { CronService } from './services/cron.service';
 
 @Module({
-  imports: [DatabaseModule, ScheduleModule.forRoot(),],
+  imports: [DatabaseModule, ScheduleModule.forRoot()],
   controllers: [ModelsController],
   providers: [ApiService, ModelsCrudService, ModelsRepository, ModelsMapper, CronService],
   exports: [],

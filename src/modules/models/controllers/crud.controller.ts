@@ -14,37 +14,34 @@ export class ModelsController {
   @ApiOperation({ summary: 'Создать модель' })
   @ApiResponse({ status: 201, type: ModelEntity })
   async create(@Body() dto: CreateModelDto): Promise<ModelEntity> {
-    return this.crudService.create(dto)
+    return this.crudService.create(dto);
   }
 
   @Get()
   @ApiOperation({ summary: 'Получить все модели' })
   @ApiResponse({ status: 200, type: ModelEntity, isArray: true })
   async find(): Promise<ModelEntity[]> {
-    return this.crudService.findMany()
+    return this.crudService.findMany();
   }
 
   @Put(':id')
   @ApiOperation({ summary: 'Обновить модель' })
   @ApiResponse({ status: 200, type: ModelEntity })
-  async update(
-    @Param('id') id: string,
-    @Body() dto: UpdateModelDto,
-  ): Promise<ModelEntity> {
-    return this.crudService.update(id, dto)
+  async update(@Param('id') id: string, @Body() dto: UpdateModelDto): Promise<ModelEntity> {
+    return this.crudService.update(id, dto);
   }
 
   @Delete(':id')
   @ApiOperation({ summary: 'Удалить модель' })
   @ApiResponse({ status: 200, type: ModelEntity })
   async delete(@Param('id') id: string): Promise<ModelEntity> {
-    return this.crudService.delete(id)
+    return this.crudService.delete(id);
   }
 
   @Get(':id')
   @ApiOperation({ summary: 'Получить модель по id' })
   @ApiResponse({ status: 200, type: ModelEntity })
   async findOne(@Param('id') id: string): Promise<ModelEntity> {
-    return this.crudService.findOneByIdOrThrowError(id)
+    return this.crudService.findOneByIdOrThrowError(id);
   }
 }
