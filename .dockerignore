@@ -1,0 +1,8 @@
+.git
+Dockerfile
+.git*
+README.md
+.dockerignore
+node_modules
+npm-debug.log
+deploy
