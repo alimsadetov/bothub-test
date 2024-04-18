@@ -13,8 +13,8 @@ export class ModelsMapper {
         name: dto.name,
         description: dto.description,
         context_length: dto.context_length,
-        tokenizer: dto.architecture.tokenizer,
-        modality: dto.architecture.modality,
+        tokenizer: dto.architecture?.tokenizer,
+        modality: dto.architecture?.modality,
       };
     });
   }
