@@ -4,11 +4,9 @@ This repository contains the code for the Bothub Test project.
 
 ## Запуск через Docker Compose
 
-1. Build the Docker image:
-npm run docker:build
+1. npm run docker:build
 
-2. Start the containers:
-docker-compose up -d
+2. docker-compose up -d
 
 Swagger документация будет доступна по адресу http://localhost:3100/api
 
